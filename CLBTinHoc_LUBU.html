@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Phiếu tham gia CLB tin học LUBU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script language="JavaScript" src="LUBU.js">
+
+    </script>
+</head >
+                <body>
+                    <label style="margin-left:550px; font-family:Arial; font-size:20px;">PHIẾU THAM GIA CLB TIN HỌC <span style="color:deepskyblue;">LUBU</span></label>
+                    <table border="1" rules="none" style="border-collapse:collapse;text-align:left; vertical-align:middle; margin-left:auto; margin-right:auto; width:700px;">
+                        <tr>
+                            <td>Mã sinh viên :</td>
+                            <td onchange="Id(this)">
+                                <input type="text" id="studentId" name="studentId" value="Nhập Mã SV" />
+                                <span style="color:red;" id="studentId_error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Họ và tên :</td>
+                            <td onchange="Name(this)">
+                                <input type="text" id="studentName" name="studentName" value="Nhập Họ và tên" />
+                                <span style="color:red;" id="studentName_error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tuổi :</td>
+                            <td onchange="Age(this)">
+                                <input type="text" id="age" name="age" value="Nhập tuổi > 18" />
+                                <span style="color:red;" id="age_error"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ngoại ngữ :</td>
+                            <td id="language" onclick="languageChanged();">
+                                <input type="checkbox" name="nutchon" value="Anh" /><label>Anh </label>
+                                <input type="checkbox" name="nutchon" value="Pháp" /><label>Pháp </label>
+                                <input type="checkbox" name="nutchon" value="Nhật" /><label>Nhật </label> <p style="color:red;" id="show_language"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chuyên ngành :</td>
+                            <td >
+                                <select id="major" onchange="majorChanged(this)">
+                                    <option value="hethong">Hệ thống</option>
+                                    <option value="phanmem">Phần mềm</option>
+                                    <option value="mangmaytinh">Mạng máy tính</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sở trường :</td>
+                            <td >
+                                <p id="show"></p>
+                            </td>
+                        </tr>
+                        <tr style="border-top:1px solid gray;">
+                            <td></td>
+                            <td>
+                                <input type="submit" onclick="validate(this);" id="btn" name="btn"
+                                    value="Đăng ký" />
+                                <span style="color:blue;" id="anounce"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </body>
+</html >
